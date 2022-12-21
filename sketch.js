@@ -20,7 +20,7 @@ function setup() {
     dist = radius = (height + width) /102;
   } else {
     dist = radius = (height + width) /61;
-    height += 200;
+    height += 100;
   }
   stroke = dist / 3;
 
@@ -29,7 +29,9 @@ function setup() {
   canv.position(0, 0);
   background(20);
   noStroke();
-  fill(40, 40, 230); // green 40 200 40
+  // fill(40 200 40); // green
+  // fill(40, 40, 230); // blue
+  fill(100, 30, 230); // purple
 }
 
 function draw() {
