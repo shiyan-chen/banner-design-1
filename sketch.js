@@ -11,17 +11,11 @@ let t = 0; // time variable
 let dist = 30;
 let radius = 30
 let stroke = 10;
+let portrait = window.matchMedia("(orientation: portrait)");
 
-// function useWindowSize() {
-//   const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setSize([window.innerHeight, window.innerWidth]);
-//     };
-//     window.addEventListener("resize", handleResize);
-//   }, []);
-//   return size;
-// }
+portrait.addEventListener("change", function(e) {
+    setup();
+})
 
 window.addEventListener("resize", () => {
   setup();
