@@ -29,14 +29,14 @@ export const NavBar = () => {
 
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-        <Container>
+      <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+        <Container fluid>
           <Navbar.Brand href="/">Shiyan's Portfolio</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto">
+            <Nav className="m-auto">
               <Nav.Link
                 href="#home"
                 className={
@@ -46,30 +46,44 @@ export const NavBar = () => {
               >
                 Home
               </Nav.Link>
+
               <Nav.Link
-                href="#skills"
+                href="#code"
                 className={
-                  activeLink === "skills" ? "active navbar-link" : "navbar-link"
+                  activeLink === "code" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("skills")}
+                onClick={() => onUpdateActiveLink("code")}
               >
-                Skills
+                Code
               </Nav.Link>
+
               <Nav.Link
-                href="#projects"
+                href="#design"
                 className={
-                  activeLink === "projects"
+                  activeLink === "design"
                     ? "active navbar-link"
                     : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("projects")}
+                onClick={() => onUpdateActiveLink("design")}
               >
-                Projects
+                Design
+              </Nav.Link>
+
+              <Nav.Link
+                href="#contact"
+                className={
+                  activeLink === "contact"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("contact")}
+              >
+                Contact
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
               <button className="vvd">
-                <span>Let’s Connect</span>
+                <span>Download CV</span>
               </button>
             </span>
           </Navbar.Collapse>
