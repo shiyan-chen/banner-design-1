@@ -15,16 +15,17 @@ window.addEventListener("resize", () => {
 });
 
 function setup() {
-  const [height, width] = [window.innerHeight, window.innerWidth];
+  var [height, width] = [window.innerHeight, window.innerWidth];
   if (height + width > 1500) {
     dist = radius = (height + width) /102;
   } else {
     dist = radius = (height + width) /61;
+    height += 150;
   }
   stroke = dist / 3;
 
   canv = createCanvas(width, height);
-  canv.style("z-index: -1");
+  canv.style("z-index: -3");
   canv.position(0, 0);
   background(20);
   noStroke();
