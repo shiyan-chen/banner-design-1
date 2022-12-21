@@ -27,6 +27,10 @@ window.addEventListener("resize", () => {
   setup();
 });
 
+screen.addEventListener("orientationchange", () => {
+  setup();
+});
+
 function setup() {
   const [height, width] = [window.innerHeight, window.innerWidth];
   createCanvas(width, height);
