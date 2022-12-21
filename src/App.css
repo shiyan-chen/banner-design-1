@@ -1,6 +1,6 @@
 :root {
   /* Palette */
-  --main-color: rgb(255, 45, 45);
+  --main-color: rgb(255, 78, 19);
   --highlight-color: rgb(255, 255, 255);
   --lg-size: 991px;
 }
@@ -53,21 +53,25 @@ body {
 
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 18px 20px;
+  padding: 5px 10px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
-.navbar-brand {
+nav.navbar.scrolled {
+  background-color: rgba(0,0,0,0.9);
+
+}
+
+nav.navbar a.navbar-brand {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 400;
   color: var(--main-color) !important;
   letter-spacing: 0.8px;
-  padding: 0 15px;
-  font-size: 24px !important;
-  font-weight: bold;
-  opacity: 1;
+  padding: 0 0px;
+  font-size: x-large !important;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -75,7 +79,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   color: var(--main-color) !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 18px;
+  font-size: medium;
   opacity: 1;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -90,8 +94,8 @@ span.navbar-text {
   font-weight: 700;
   color: var(--main-color);
   border: 1px solid var(--main-color);
-  padding: 10px 40px;
-  font-size: 18px;
+  padding: 8px 40px;
+  font-size: medium;
 	position: relative;
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
@@ -175,17 +179,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: left;
 }
 .banner h1 {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
+  color: black;
+  display: inline;
+  -webkit-text-stroke: 1.3px var(--main-color);
+
+  text-shadow:
+  -3px -1px 0 rgb(0, 0, 0);
+}
+.banner .highlight-banner {
   color: var(--main-color);
+  /* white-space: nowrap; */
+  -webkit-text-stroke: 0px var(--highlight-color);
 }
 .banner p {
   margin: 15px;
+  font-weight:500;
   color: var(--main-color);
   display: inline-block;
   vertical-align: top;
+  text-shadow:
+  -1px -1px 0 rgb(0, 0, 0);
 }
 .dividing-line {
   width: 2px;
@@ -194,19 +212,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-flex;
 }
 
+@media (max-width:1199px) {
+  .banner h1 {
+    font-size: 50px;
+  }
+}
+
 
 @media (max-width:991px) {
   nav.navbar {
-    padding: 18px 0px;
-  }
-  .navbar-brand {
-    font-weight: 400;
-    color: var(--main-color) !important;
-    letter-spacing: 0.8px;
-    padding: 0 15px;
-    font-size: 24px !important;
-    font-weight: bold;
-    opacity: 1;
+    padding: 10px 0px;
   }
   span.navbar-text {
     display:table;
@@ -214,21 +229,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-right: auto;
   }
   .navbar-text button {
-    font-weight: 700;
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
     padding: 5px 10px;
-    font-size: 18px;
-    position: relative;
-    background-color: transparent;
-    transition: 0.3s ease-in-out;
   }
   .banner {
-    margin-top: 40vh;
+    margin-top: 35vh;
     text-align: center;
   }
   .banner p {
     display: none;
+  }
+  .banner h1 {
+    font-size: 59px;
   }
   .dividing-line {
     display: none;
@@ -237,35 +248,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 @media (max-width:575px) {
-  nav.navbar {
-    padding: 10px 0px;
-  }
   .navbar-brand {
-    font-weight: 400;
-    color: var(--main-color) !important;
-    letter-spacing: 0.8px;
     padding: 0 0px;
-    font-size: 24px !important;
-    font-weight: bold;
-    opacity: 1;
-  }
-  span.navbar-text {
-    display:table;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .navbar-text button {
-    font-weight: 700;
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-    padding: 5px 10px;
-    font-size: 18px;
-    position: relative;
-    background-color: transparent;
-    transition: 0.3s ease-in-out;
   }
   .banner {
-    margin-top: 25vh;
+    margin-top: 28vh;
     text-align: left;
   }
   .banner p {

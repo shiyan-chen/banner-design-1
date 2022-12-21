@@ -9,8 +9,19 @@ export const Banner = () => {
           <Col lg={1}></Col>
           <Col lg={5}>
             <h1>
-              Hi, my name is Shiyan. <br />
-              I'm a Full-Stack Software Engineer / UI Designer / Architect.
+              Hi, my name is&nbsp;
+            </h1>
+            <h1 className="highlight-banner">
+              Shiyan
+            </h1>
+            <h1>
+              . <br /> I'm a
+            </h1>
+            <h1 className="highlight-banner">
+            &nbsp;Full Stack&nbsp;
+            </h1>
+            <h1>
+            Software Developer / UI Designer / Architect.
             </h1>
           </Col>
           <Col lg={true}>

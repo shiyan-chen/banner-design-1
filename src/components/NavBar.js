@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useState, useEffect } from "react";
+import logo from '../assets/img/logo.png';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -31,7 +32,10 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
         <Container fluid>
-          <Navbar.Brand href="/">Shiyan's Portfolio</Navbar.Brand>
+          <Navbar.Brand href="/">
+            {/* <img src={logo} alt="Shiyan" /> */}
+            <img src={logo} style={{height: 50 + 'px', marginTop: 3 + 'px', marginRight: "150px"}} alt="Shiyan" />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
