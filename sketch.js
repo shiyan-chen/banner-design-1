@@ -1,10 +1,3 @@
-/*
- * @name Wavemaker
- * @description This illustrates how waves (like water waves) emerge
- * from particles oscillating in place. Move your mouse to direct the wave.
- * Contributed by Aatish Bhatia, inspired by <a href="https://beesandbombs.tumblr.com/post/45513650541/orbiters">Orbiters</a> by Dave Whyte.
- */
-
 let t = 0; // time variable
 let dist = 30;
 let radius = 30
@@ -50,9 +43,10 @@ function draw() {
       const myX = x + radius * cos(2 * PI * t + angle);
       const myY = y + radius * sin(2 * PI * t + angle);
 
+      fill(100 + angle * 10, 30 - angle * 10, 200)
       ellipse(myX, myY, stroke); // draw particle
     }
   }
 
-  t = t + 0.004; // update time
+  t = t + 0.005; // update time
 }
