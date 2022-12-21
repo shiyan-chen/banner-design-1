@@ -43,8 +43,9 @@ function draw() {
       const myX = x + radius * cos(2 * PI * t + angle);
       const myY = y + radius * sin(2 * PI * t + angle);
 
-      fill(100 + angle * 10, 30 - angle * 10, 200)
+      fill(100 + angle * 10, 30, 180 - angle * 10)
       ellipse(myX, myY, stroke); // draw particle
+
     }
   }
 
