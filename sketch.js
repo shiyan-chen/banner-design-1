@@ -33,10 +33,12 @@ screen.addEventListener("orientationchange", () => {
 
 function setup() {
   const [height, width] = [window.innerHeight, window.innerWidth];
+  dist = radius = (height + width) /102;
+  stroke = dist / 3;
   createCanvas(width, height);
+  background(20);
   noStroke();
   fill(40, 40, 230); // green 40 200 40
-  background(20);
 }
 
 function draw() {
