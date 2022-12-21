@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #d2fbfc !important;
+  background-color: #0a0a0a !important;
   color: #fff !important;
 }
 
@@ -60,14 +60,8 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
-@media (max-width:991px) {
-  nav.navbar {
-    padding: 18px 0px;
-  }
-}
 .navbar-brand {
   font-weight: 400;
-  font-family: sans-serif;
   color: var(--main-color) !important;
   letter-spacing: 0.8px;
   padding: 0 15px;
@@ -75,9 +69,9 @@ nav.navbar {
   font-weight: bold;
   opacity: 1;
 }
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  font-family: sans-serif;
   color: var(--main-color) !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
@@ -101,23 +95,6 @@ span.navbar-text {
 	position: relative;
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
-}
-@media (max-width:991px) {
-  span.navbar-text {
-    display:table;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .navbar-text button {
-    font-weight: 700;
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-    padding: 5px 10px;
-    font-size: 18px;
-    position: relative;
-    background-color: transparent;
-    transition: 0.3s ease-in-out;
-  }
 }
 
 .navbar-text button span {
@@ -191,3 +168,111 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+
+/************ Banner Css ************/
+.banner {
+  margin-top: 40vh;
+  text-align: left;
+}
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  color: var(--main-color);
+}
+.banner p {
+  margin: 15px;
+  color: var(--main-color);
+  display: inline-block;
+  vertical-align: top;
+}
+.dividing-line {
+  width: 2px;
+  height: 2000px;
+  background-color: var(--main-color);
+  display: inline-flex;
+}
+
+
+@media (max-width:991px) {
+  nav.navbar {
+    padding: 18px 0px;
+  }
+  .navbar-brand {
+    font-weight: 400;
+    color: var(--main-color) !important;
+    letter-spacing: 0.8px;
+    padding: 0 15px;
+    font-size: 24px !important;
+    font-weight: bold;
+    opacity: 1;
+  }
+  span.navbar-text {
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar-text button {
+    font-weight: 700;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 5px 10px;
+    font-size: 18px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+  .banner {
+    margin-top: 40vh;
+    text-align: center;
+  }
+  .banner p {
+    display: none;
+  }
+  .dividing-line {
+    display: none;
+  }
+}
+
+
+@media (max-width:575px) {
+  nav.navbar {
+    padding: 10px 0px;
+  }
+  .navbar-brand {
+    font-weight: 400;
+    color: var(--main-color) !important;
+    letter-spacing: 0.8px;
+    padding: 0 0px;
+    font-size: 24px !important;
+    font-weight: bold;
+    opacity: 1;
+  }
+  span.navbar-text {
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar-text button {
+    font-weight: 700;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 5px 10px;
+    font-size: 18px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+  }
+  .banner {
+    margin-top: 25vh;
+    text-align: left;
+  }
+  .banner p {
+    display: none;
+  }
+  .dividing-line {
+    display: none;
+  }
+}
+
