@@ -8,7 +8,8 @@
 // import React, {useState, useEffect} from 'react';
 
 let t = 0; // time variable
-let side = 40;
+let dist = 30;
+let radius = 30
 let stroke = 10;
 
 // function useWindowSize() {
@@ -38,8 +39,8 @@ function draw() {
   background(0, 10); // translucent background (creates trails)
 
   // make a x and y grid of ellipses
-  for (let x = 0; x <= width; x = x + side) {
-    for (let y = 0; y <= height; y = y + side) {
+  for (let x = 0; x <= width; x = x + dist) {
+    for (let y = 0; y <= height; y = y + dist) {
       // starting point of each circle depends on mouse position
       const xAngle = map(mouseX, 0, width, -4 * PI, 4 * PI, true);
       const yAngle = map(mouseY, 0, height, -4 * PI, 4 * PI, true);
@@ -47,8 +48,8 @@ function draw() {
       const angle = xAngle * (x / width) + yAngle * (y / height);
 
       // each particle moves in a circle
-      const myX = x + 30 * cos(2 * PI * t + angle);
-      const myY = y + 30 * sin(2 * PI * t + angle);
+      const myX = x + radius * cos(2 * PI * t + angle);
+      const myY = y + radius * sin(2 * PI * t + angle);
 
       ellipse(myX, myY, stroke); // draw particle
     }
