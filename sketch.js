@@ -20,7 +20,7 @@ function setup() {
     dist = radius = (height + width) /102;
   } else {
     dist = radius = (height + width) /61;
-    height += 150;
+    height += 200;
   }
   stroke = dist / 3;
 
