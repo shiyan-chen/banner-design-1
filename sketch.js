@@ -5,23 +5,12 @@
  * Contributed by Aatish Bhatia, inspired by <a href="https://beesandbombs.tumblr.com/post/45513650541/orbiters">Orbiters</a> by Dave Whyte.
  */
 
-// import React, {useState, useEffect} from 'react';
-
 let t = 0; // time variable
 let dist = 30;
 let radius = 30
 let stroke = 10;
-let portrait = window.matchMedia("(orientation: portrait)");
-
-portrait.addEventListener("change", function(e) {
-    setup();
-})
 
 window.addEventListener("resize", () => {
-  setup();
-});
-
-screen.addEventListener("orientationchange", () => {
   setup();
 });
 
@@ -34,7 +23,9 @@ function setup() {
   }
   stroke = dist / 3;
 
-  createCanvas(width, height);
+  canv = createCanvas(width, height);
+  canv.style("z-index: -1");
+  canv.position(0, 0);
   background(20);
   noStroke();
   fill(40, 40, 230); // green 40 200 40
