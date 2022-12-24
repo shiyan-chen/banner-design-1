@@ -5,7 +5,7 @@ export const Banner = () => {
   return (
     <section className="banner">
       <Container fluid>
-        <Row>
+        <Row className="banner-row">
           <Col lg={1}></Col>
           <Col lg={5}>
             <h1>

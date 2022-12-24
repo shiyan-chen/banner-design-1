@@ -173,10 +173,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
+
 /************ Banner Css ************/
 .banner {
   margin-top: 40vh;
   text-align: left;
+  /* background-color: #61dafb; */
+}
+.banner-row {
+  height: 60vh;
 }
 .banner h1 {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -207,17 +212,68 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .dividing-line {
   width: 2px;
-  height: 2000px;
+  height: 100%;
   background-color: var(--main-color);
   display: inline-flex;
 }
+
+
+/************ About Css ************/
+.about {
+  text-align: left;
+}
+.about h1 {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  color: black;
+  display: inline;
+  -webkit-text-stroke: 1.3px var(--main-color);
+
+  text-shadow:
+  -3px -1px 0 rgb(0, 0, 0);
+}
+.about .highlight-banner {
+  color: var(--main-color);
+  /* white-space: nowrap; */
+  -webkit-text-stroke: 0px var(--highlight-color);
+}
+/* .about div {
+  display: inline;
+} */
+.about div {
+  display: inline-block;
+}
+.about p {
+  margin: 15px;
+  font-weight:500;
+  color: var(--main-color);
+  display: inline-block;
+  vertical-align: top;
+  text-shadow:
+  -1px -1px 0 rgb(0, 0, 0);
+}
+.dividing-line2 {
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  display: inline-flex;
+}
+
+
+
+
+
+
+
 
 @media (max-width:1199px) {
   .banner h1 {
     font-size: 50px;
   }
 }
-
 
 @media (max-width:991px) {
   nav.navbar {
@@ -232,8 +288,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     padding: 5px 10px;
   }
   .banner {
-    margin-top: 35vh;
+    margin-top: 20vh;
     text-align: center;
+  }
+  .banner-row {
+    height: 80vh;
   }
   .banner p {
     display: none;
@@ -254,6 +313,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   .banner {
     margin-top: 28vh;
     text-align: left;
+  }
+  .banner-row {
+    height: 72vh;
   }
   .banner p {
     display: none;
